@@ -7,6 +7,7 @@ canvas {
 	width: 400px;
 	height: 400px;
 	margin: 0 auto;
+    border: 2px solid cyan;
 	background-image: url(https://media.istockphoto.com/id/535983237/photo/beautiful-green-grass-pattern-from-golf-course.jpg?s=612x612&w=0&k=20&c=EsWZu1jXQ2AJ5kkNp-jUu6ZmlYwdqHbqZCEtRHVWslE=);
 	align-items: center;
 }

@@ -72,7 +72,7 @@ switch (event.keyCode) {
   }
 };
 
-function checkCollision() {
+function checkBump() {
   for (var i = 0; i < dots.length; i++) {
     if (snakeX < dots[i].x + 10 && 
       snakeX + 10 > dots[i].x && 
@@ -99,7 +99,7 @@ function gameLoop() {
   moveSnake();
   drawSnake();
   drawDots();
-  checkCollision();
+  checkBump();
   if(!gameEnd) {
     setTimeout(gameLoop, 100);
   }
