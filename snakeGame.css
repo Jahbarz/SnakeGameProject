@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+
+canvas {
+	display: flex;
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	background-image: url(https://media.istockphoto.com/id/535983237/photo/beautiful-green-grass-pattern-from-golf-course.jpg?s=612x612&w=0&k=20&c=EsWZu1jXQ2AJ5kkNp-jUu6ZmlYwdqHbqZCEtRHVWslE=);
+	align-items: center;
+}
+
+h1 {
+	text-align: center;
+	font-family: fantasy;
+	font-size: 36px;
+    color: rgb(0, 73, 0);
+}
+
+.newGame {
+    display: flex;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(0, 73, 0);
+    margin: 10px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px;
+}
+	
+h2{
+	display: flex;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(0, 73, 0);
+    margin: 10px auto;
+	justify-content: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px;
+}
