@@ -3,8 +3,8 @@ const canvas2d = canvas.getContext("2d");
 const start = document.getElementById("startGame");
 const replay = document.getElementById("newGame");
 let gameEnd = false;
-canvas.width = 375;
-canvas.height = 375;
+canvas.width = 500;
+canvas.height = 500;
 var snakeBody = [];
 var snakeLength = 1;
 var snakeX = 0;
@@ -13,13 +13,18 @@ var directionX = 10;
 var directionY = 0;
 var dots = [];
 
-//let score = 0
+let score = 0
 
-//window.addEventListener("keyup", ev => {
-	//if (ev.keyCode === 32) {
-	  
-	//}
-  //});
+//Start Screen/Button
+//function start(){
+//  window.addEventListener("keyup", event => {
+//	if (event.keyCode == 32) {
+//    
+//	}
+//  });
+//}
+
+  
 
 function drawSnake() {
   canvas2d.clearRect(0, 0, canvas.width, canvas.height);
@@ -74,22 +79,22 @@ switch (event.keyCode) {
 
 function checkBump() {
   for (var i = 0; i < dots.length; i++) {
-    if (snakeX < dots[i].x + 10 && 
-      snakeX + 10 > dots[i].x && 
-      snakeY < dots[i].y + 10 && 
-      snakeY + 10 > dots[i].y) {
+    if (snakeX < dots[i].x + 15 && 
+      snakeX + 20 > dots[i].x && 
+      snakeY < dots[i].y + 15 && 
+      snakeY + 20 > dots[i].y) {
         snakeLength++;
         dots.splice(i, 1);
     }
   }
-  if (snakeX < -10 || 
-    snakeY < -10 || 
-    snakeX > canvas.width+10 ||
-    snakeY > canvas.height+10) {
+  if (snakeX < -20 || 
+    snakeY < -20 || 
+    snakeX > canvas.width+20 ||
+    snakeY > canvas.height+20) {
       gameOver();
   }
   for (var i = 1; i < snakeBody.length; i++) {
-    if (snakeX === snakeBody[i].x && snakeY === snakeBody[i].y) {
+    if (snakeX == snakeBody[i].x && snakeY == snakeBody[i].y) {
       gameOver();
     }
   }
